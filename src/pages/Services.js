@@ -21,23 +21,11 @@ function Services() {
                     <div class="flex flex-wrap -m-4">
                         {services.map(data => {
                             return (
-
-
                                 <div key={data.id} class="p-10 lg:w-1/3">
                                     <div class="h-full bg-transparent border-[#8062D6] hover:bg-[#6527BE] hover:text- transition-all border-[1px] bg-opacity-75 px-10 pt-10 pb-10 rounded-lg overflow-hidden text-center relative">
-                                        <img className='w-[25%]' src={data.img} />
-                                        {/* <div className='w-[0%]'> */}
-                                        {/* <CgWebsite className='w-10 h-16' /> */}
-                                        {/* </div> */}
-                                        {/* <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2> */}
+                                        <img className='w-[25%]' src={data.img} alt='img' />
                                         <h1 class="title-font sm:text-2xl text-xl text-left font-bold text-[#ec634b] mb-3">{data.heading}</h1>
                                         <p class="leading-relaxed text-left mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                                        {/* <a class="text-indigo-500 inline-flex items-center">Learn More
-                                            <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                <path d="M5 12h14"></path>
-                                                <path d="M12 5l7 7-7 7"></path>
-                                            </svg>
-                                        </a> */}
                                     </div>
                                 </div>
                             )
