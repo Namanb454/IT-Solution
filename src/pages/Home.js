@@ -2,22 +2,13 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 // import Typewriter from 'typewriter-effect';
 import Main from '../components/Main';
+import About from './About';
 import Services from './Services';
+import Features from './Features';
+import Footer from '../components/Footer';
 
 
 function Home() {
-
-  // const vidRef = useRef();
-
-  // useEffect(() => { vidRef.current.play(); }, []);
-
-  // <video
-  //   src="/videos.mp4"
-  //   ref={vidRef}
-  //   muted
-  //   autoPlay
-  //   loop
-  // />
 
   return (
     <div>
@@ -28,11 +19,20 @@ function Home() {
         <Main />
       </div>
 
-      <div id='services'>
-        <Services/>
+      <div id='about'>
+        <About />
       </div>
 
+      <div id='services'>
+        <Services />
+      </div>
 
+      <div id='features'>
+        <Features />
+      </div>
+      <div>
+        <Footer />
+      </div>
     </div>
   )
 }

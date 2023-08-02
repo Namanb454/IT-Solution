@@ -14,7 +14,7 @@ import Services from './pages/Services';
 function AppRouter() {
     return (
         <Router>
-            <div className='bg-black'>
+            <div className='bg-[#0e0c27]'>
                 <Routes>
                     <Route exact path="/" element={<Home />} />
                     {/* <Route exact path="/services" element={<Services />} /> */}

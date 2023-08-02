@@ -9,8 +9,8 @@ const Navbar = () => {
     const navbar = [
         { 'id': '1', 'nav': 'Intro', 'link': '#' },
         { 'id': '2', 'nav': 'About Us', 'link': '#about' },
-        { 'id': '3', 'nav': 'Features', 'link': '#about' },
-        { 'id': '4', 'nav': 'Services', 'link': '#services' },
+        { 'id': '3', 'nav': 'Services', 'link': '#services' },
+        { 'id': '4', 'nav': 'Features', 'link': '#features' },
         { 'id': '5', 'nav': 'Demo', 'link': '#Demo' },
         // { 'id': '5', 'nav': 'Meet The Team', 'link': '/team' },
         // { 'id': '5', 'nav': 'Get In Touch' }
