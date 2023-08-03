@@ -46,7 +46,7 @@ const Navbar = () => {
                     <div className=" w-full flex items-center ">
                         <div className="flex-shrink-0">
                             {/* <img className="h-8 w-8" src="/logo.svg" alt="Logo" /> */}
-                            <Link to='/' className='text-2xl font-bold '>B&K Solutions</Link>
+                            <Link to='/' className='lg:text-2xl text-xl font-bold '>B&K Solutions</Link>
                         </div>
                         <div className="hidden md:block mx-auto">
                             <div className="ml-10 flex items-baseline space-x-4">
@@ -128,7 +128,7 @@ const Navbar = () => {
             {/* Mobile Homeu, toggle classes based on Homeu state */}
             <div
                 className={`${isOpen ? 'block' : 'hidden'
-                    } md:hidden bg-[#F1EEE9]`}
+                    } md:hidden bg-white`}
                 id="mobile-Homeu"
             >
                 <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
@@ -138,7 +138,7 @@ const Navbar = () => {
 
                             <a key={data.id}
                                 href={data.link}
-                                className="text-[#15133C] font-semibold hover:text-[#EC994B] transition-all block px-3 py-2 rounded-md text-base"
+                                className="text-[#6527BE] font-bold hover:text-[#ec634b] transition-all block px-3 py-2 rounded-md text-base"
                             >
                                 {data.nav}
                             </a>
@@ -146,7 +146,7 @@ const Navbar = () => {
                     })}
                     <Link
                         to="/"
-                        className="w-fit text-white font-semibold bg-[#EC994B] hover:bg-white border-2 border-[#EC994B] transition-all hover:text-[#EC994B] block px-5 py-[5px] rounded-md text-base"
+                        className="w-fit mx-auto text-white font-semibold bg-[#6527BE] hover:bg-white border-2 border-[#9681EB] transition-all hover:text-[#6527BE] block px-5 py-[5px] rounded-md text-base"
                     >
                         Get In Touch
                     </Link>

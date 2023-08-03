@@ -2,27 +2,32 @@ exports.about = [
     {
         'id': 1,
         'q': 'Expertise:',
-        'ans': ' Our team comprises skilled professionals with years of experience across various IT domains. From software development and cybersecurity to cloud solutions and digital transformation, we have the expertise to address your specific requirements.'
+        'ans': ' Our team comprises skilled professionals with years of experience across various IT domains. We have the expertise to address your specific requirements.',
+        'sn': '01.'
     },
     {
         'id': 2,
         'q': 'Client-Centric Approach:',
-        'ans': "We believe that successful IT solutions are built on a deep understanding of our clients' needs. We take the time to listen, learn, and collaborate, ensuring that the solutions we provide truly meet your objectives."
+        'ans': "We value understanding our clients' needs to create successful IT solutions. Through listening, learning, and collaboration, we ensure the solutions we offer meet your objectives.",
+        'sn': '02.'
     },
     {
         'id': 3,
         'q': 'Innovation:',
-        'ans': "The technology landscape is in a constant state of flux, and we embrace this change. By staying up-to-date with the latest trends and advancements, we bring cutting-edge solutions that give your business a competitive edge."
+        'ans': "We embrace the ever-changing technology landscape by staying current with trends and advancements, providing cutting-edge solutions for your business's competitive advantage.",
+        'sn': '03.'
     },
     {
         'id': 4,
         'q': 'Reliability:',
-        'ans': "We understand the critical role that technology plays in your operations. That's why we prioritize reliability and consistency in all our services. You can trust us to deliver solutions that work seamlessly day in and day out."
+        'ans': "We value the importance of technology in your operations. Therefore, we prioritize reliable and consistent services. Rest assured, our solutions work seamlessly every day.",
+        'sn': '04.'
     },
     {
         'id': 5,
         'q': 'End-to-End Solutions:',
-        'ans': "Whether you're a startup looking to establish your digital presence or an established enterprise seeking to optimize your IT infrastructure, we offer end-to-end solutions that encompass consulting, development, implementation, and ongoing support."
+        'ans': "We provide comprehensive solutions for startups and established enterprises, covering everything from digital presence to IT infrastructure, including consulting, development, implementation, and ongoing support. ",
+        'sn': '05.'
     }
 
 ]
@@ -43,7 +48,7 @@ exports.values = [
     {
         'id': 3,
         'heading': 'Collaboration',
-        'values': 'Collaboration is at the heart of our approach. We work closely with our clients, understanding their needs and involving them throughout the solution-building process.',
+        'values': 'We work closely with our clients, understanding their needs and involving them throughout the solution-building process.',
         'img': 'collaboration.png'
     },
     {

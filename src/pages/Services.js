@@ -16,7 +16,7 @@ function Services() {
     return (
         <div id='services' className='text-white'>
             <section class="text-white body-font">
-                <div class="container px-5 py-24 mx-auto">
+                <div class="container px-5 lg:py-20 mx-auto">
                     <h2 className='lg:text-5xl text-3xl font-bold text-left px-5'>Our Services</h2>
                     <div class="flex flex-wrap -m-4">
                         {services.map(data => {
