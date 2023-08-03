@@ -20,7 +20,7 @@ function Main() {
                   loop: true,
                   delay: 40,
                   strings: [
-                    'Website Development', 'App Development', 'Software Tools', 'Graphic Design', 'Content Writing', 'SEO Services', 'Data Analysis', 'IT Cosultancy'
+                    'Website Development', 'App Development', 'Software Tools', 'Graphic Design', 'Content Writing', 'SEO Services', 'Data Analysis', 'IT Consultancy'
                   ],
                 }} />
             </div>
