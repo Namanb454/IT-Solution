@@ -5,7 +5,7 @@ function About() {
     return (
         <div>
             <section className="text-gray-600 body-font">
-                <div className='lg:py-20'>
+                <div className='lg:py-20 py-10'>
                     <div className="container mx-auto px-5 py-5 md:flex-row flex-col items-center">
                         <h2 className='lg:w-1/2 w-full lg:ml-auto text-center lg:pl-10 lg:text-5xl text-3xl font-bold text-white'>About Us</h2>
                     </div>
