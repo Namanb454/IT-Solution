@@ -27,8 +27,7 @@ function Main() {
           </h2>
         </div>
 
-
-        <h3 className='lg:w-[40%] w-[90%] absolute lg:top-[75%] top-[65%] lg:left-[30%] left-[45%] transform -translate-x-1/2 -translate-y-1/2 z-10 text-white text-base mx-5 text-justify'>Empowering Your Business with Reliable IT Solutions for Uninterrupted Growth and Success. </h3>
+        <h3 className='lg:w-[40%] w-full absolute lg:top-[75%] top-[70%] lg:left-[30%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 z-10 text-white text-base px-5 lg:text-justify text-center'>Empowering Your Business with Reliable IT Solutions for Uninterrupted Growth and Success. </h3>
         <div className='lg:w-[50%] w-[100%] absolute lg:top-[53%] lg:left-[75%] left-[50%] top-[45%] transform -translate-x-1/2 -translate-y-1/2 z-10 text-white text-center  '>
           <img src="home2.png" alt="Image" className={'w-full hover:animate-pulse h-auto transition-transform'} />
         </div>

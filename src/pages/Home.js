@@ -28,7 +28,7 @@ function Home() {
       </div>
 
       <div id='features'>
-        <Features />
+        {/* <Features /> */}
       </div>
       <div>
         <Footer />
