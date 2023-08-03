@@ -5,6 +5,7 @@ import Main from '../components/Main';
 import About from './About';
 import Services from './Services';
 import Features from './Features';
+// import GetInTouch from './GetInTouch';
 import Footer from '../components/Footer';
 
 
@@ -30,6 +31,7 @@ function Home() {
       <div id='features'>
         {/* <Features /> */}
       </div>
+
       <div>
         <Footer />
       </div>

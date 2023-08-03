@@ -1,11 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 // import { BsFillCartFill } from "react-icons/bs";
 // import { HiMiniBars4 } from "react-icons/hi";
 
 import { Link } from 'react-router-dom';
 const Navbar = () => {
-
     const [isOpen, setIsOpen] = useState(false);
+
+    let menuRef = useRef();
+  useEffect(() =>{
+    let handler = (e) =>{
+      if(!menuRef.current.contains(e.target)){
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return()=>{
+      document.removeEventListener("mousedown", handler);
+    }
+  })
     const navbar = [
         { 'id': '1', 'nav': 'Intro', 'link': '#' },
         { 'id': '2', 'nav': 'About Us', 'link': '#about' },
@@ -13,7 +25,7 @@ const Navbar = () => {
         { 'id': '4', 'nav': 'Features', 'link': '#features' },
         { 'id': '5', 'nav': 'Demo', 'link': '#Demo' },
         // { 'id': '5', 'nav': 'Meet The Team', 'link': '/team' },
-        // { 'id': '5', 'nav': 'Get In Touch' }
+        // { 'id': '5', 'nav': 'Get In Touch', 'link': '/contact'}
     ];
     // 
 
@@ -74,6 +86,8 @@ const Navbar = () => {
                             </div>
                         </div>
                     </div>
+
+
                     <div className="-mr-2 flex md:hidden">
                         <button
                             onClick={toggleHomeu}
@@ -129,7 +143,7 @@ const Navbar = () => {
             <div
                 className={`${isOpen ? 'block' : 'hidden'
                     } md:hidden bg-white`}
-                id="mobile-Homeu"
+                id="mobile-Homeu" ref={menuRef}
             >
                 <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
 
@@ -150,31 +164,6 @@ const Navbar = () => {
                     >
                         Get In Touch
                     </Link>
-
-                    {/* <Link
-                        to="/"
-                        className="text-[#EC994B] flex w-fit bg-white font-semibold hover:bg-[#EC994B] hover:text-[#15133C] block px-3 py-2 rounded-md text-base"
-                    >
-                        <span className=' mx-1 my-auto'>
-                            <BsFillCartFill />
-                        </span>
-                        Cart
-                    </Link> */}
-
-                    {/* <button
-
-                        className="text-[#EC994B] w-fit bg-white font-semibold hover:bg-[#EC994B] hover:text-[#15133C] block px-5 py-2 rounded-md text-base"
-                    >
-                        Logout
-                    </button>
-
-                    <button
-
-                        className="text-[#EC994B] w-fit bg-white font-semibold hover:bg-[#EC994B] hover:text-[#15133C] block px-5 py-2 rounded-md text-base"
-                    >
-                        Login
-                    </button> */}
-
                 </div>
             </div>
         </nav>
