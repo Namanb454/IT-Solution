@@ -61,7 +61,7 @@ function About() {
                                             return (
                                                 <div key={data.id} className="">
                                                     <div className="flex sm:flex-row flex-col items- sm:justify-start text-center sm:text-left">
-                                                        <span className="flex-shrink-0 lg:text-6xl text-3xl text-[#6527BE] font-serif font-bold mx-auto rounded-lg w-[25%] h-[30%]">{data.sn}</span>
+                                                        <span className="flex-shrink-0 lg:text-6xl text-3xl text-[#9288F8] font-serif font-bold mx-auto rounded-lg w-[25%] h-[30%]">{data.sn}</span>
                                                         <div className="flex-grow pl-5">
                                                             <h2 className="title-font font-bold text-xl text-[#ec634b]">{data.q}</h2>
                                                             <p className="mb-4 text-sm text-gray-300 lg:text-start text-justify">{data.ans}</p>
