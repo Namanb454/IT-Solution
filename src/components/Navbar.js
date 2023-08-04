@@ -4,34 +4,32 @@ import React, { useState, useEffect, useRef } from 'react';
 
 import { Link } from 'react-router-dom';
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
 
-    let menuRef = useRef();
-  useEffect(() =>{
-    let handler = (e) =>{
-      if(!menuRef.current.contains(e.target)){
-        setIsOpen(false);
-      }
+    const [isOpen, setIsOpen] = useState(false);
+    const toggleHomeu = () => {
+        setIsOpen(!isOpen);
     };
-    document.addEventListener("mousedown", handler);
-    return()=>{
-      document.removeEventListener("mousedown", handler);
-    }
-  })
+    
+    let menuRef = useRef();
+    useEffect(() => {
+        let handler = (e) => {
+            if (!menuRef.current.contains(e.target)) {
+                setIsOpen(false);
+            }
+        };
+        document.addEventListener("mousedown", handler);
+        return () => {
+            document.removeEventListener("mousedown", handler);
+        }
+    })
+
     const navbar = [
         { 'id': '1', 'nav': 'Intro', 'link': '#' },
         { 'id': '2', 'nav': 'About Us', 'link': '#about' },
         { 'id': '3', 'nav': 'Services', 'link': '#services' },
         { 'id': '4', 'nav': 'Features', 'link': '#features' },
         { 'id': '5', 'nav': 'Demo', 'link': '#Demo' },
-        // { 'id': '5', 'nav': 'Meet The Team', 'link': '/team' },
-        // { 'id': '5', 'nav': 'Get In Touch', 'link': '/contact'}
     ];
-    // 
-
-    const toggleHomeu = () => {
-        setIsOpen(!isOpen);
-    };
     const [navSize, setnavSize] = useState("5rem");
     const [navColor, setnavColor] = useState("transparent");
     const [textcolor, settextcolor] = useState("white");
@@ -90,7 +88,7 @@ const Navbar = () => {
 
                     <div className="-mr-2 flex md:hidden">
                         <button
-                            onClick={toggleHomeu}
+                            onClick={toggleHomeu}  ref={menuRef}
                             type="button"
                             className="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-black hover:bg-white focus:outline-none focus:ring- focus:ring-offset- focus:ring-offset-gray-800 focus:ring-white"
                             aria-controls="mobile-Homeu"
@@ -159,7 +157,7 @@ const Navbar = () => {
                         )
                     })}
                     <Link
-                        to="/"
+                        to="/contact"
                         className="w-fit mx-auto text-white font-semibold bg-[#6527BE] hover:bg-white border-2 border-[#9681EB] transition-all hover:text-[#6527BE] block px-5 py-[5px] rounded-md text-base"
                     >
                         Get In Touch
