@@ -141,7 +141,8 @@ const Navbar = () => {
             <div
                 className={`${isOpen ? 'block' : 'hidden'
                     } md:hidden bg-white`}
-                id="mobile-Homeu" ref={menuRef}
+                id="mobile-Homeu" 
+                // ref={menuRef}
             >
                 <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
 
