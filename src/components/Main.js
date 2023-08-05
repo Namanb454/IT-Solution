@@ -9,7 +9,7 @@ function Main() {
 
       <div className="relative w-full lg:h-screen h-[60vh] overflow-hidden">
         <img className='w-full' src='bg-video3.gif' alt='img' />
-        <div className='lg:w-auto w-full absolute lg:top-[53%] top-[20%] lg:left-[32%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 z-10 text-white text-center'>
+        <div className='lg:w-auto w-full absolute lg:top-[53%] top-[25%] lg:left-[32%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 z-10 text-white text-center'>
           <h2 className='lg:text-4xl text-lg font-bold text-center lg:mx-0 mx-5  md:mb-10 ' id='signupHeading' >
             Providing The Best IT Solution For
             <div className='w-fit font-extrabold lg:mx-5 mx-auto text-[#ec634b]' id='signupsubHeading'>
