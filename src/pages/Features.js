@@ -44,14 +44,14 @@ const GridComponent = () => {
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
         paddingTop: '1rem',
-        fontWeight: 'bold'
+        // fontWeight: 'extra-bold'
     };
 
 
     return (
         <div>
             <h1 className='lg:text-3xl text-xl' style={Style1}>AWESOME FEATURES</h1>
-            <h2 className='lg:text-4xl text-xl' style={Style2}>
+            <h2 className='lg:text-4xl text-xl font-extrabold' style={Style2}>
                 Great collection of websites
                 and enjoy our exclusive features
             </h2>
