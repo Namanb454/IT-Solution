@@ -5,16 +5,12 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 const Navbar = () => {
 
-    const [isOpen, setIsOpen] = useState(false);
-    const toggleHomeu = () => {
-        setIsOpen(!isOpen);
-    };
-
+    const [isNavOpen, setIsNavOpen] = useState(false);
     let menuRef = useRef();
     useEffect(() => {
         let handler = (e) => {
             if (!menuRef.current.contains(e.target)) {
-                setIsOpen(false);
+                setIsNavOpen(false);
             }
         };
         document.addEventListener("mousedown", handler);
@@ -86,17 +82,16 @@ const Navbar = () => {
                     </div>
 
 
-                    <div className="-mr-2 flex md:hidden">
+                    {/* <div className="-mr-2 flex md:hidden">
                         <button
-                            onClick={toggleHomeu} ref={menuRef}
+                            onClick={() => setIsNavOpen((prev) => !prev)}
                             type="button"
                             className="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-black hover:bg-white focus:outline-none focus:ring- focus:ring-offset- focus:ring-offset-gray-800 focus:ring-white"
                             aria-controls="mobile-Homeu"
                             aria-expanded="false"
                         >
-                            {/* <span className="">Open main Homeu</span> */}
-                            {/* Icon when Homeu is closed */}
-                            {!isOpen ? (
+                           
+                            {!isNavOpen ? (
                                 <svg
                                     className="block h-6 w-6"
                                     xmlns="http://www.w3.org/2000/svg"
@@ -114,7 +109,7 @@ const Navbar = () => {
                                 </svg>
 
                             ) : (
-                                // Icon when Homeu is open
+                               
                                 <svg
                                     className="block h-6 w-6"
                                     xmlns="http://www.w3.org/2000/svg"
@@ -130,41 +125,95 @@ const Navbar = () => {
                                         d="M6 18L18 6M6 6l12 12"
                                     />
                                 </svg>
-                                // <HiMiniBars4/>
+                                
                             )}
                         </button>
-                    </div>
+                    </div> */}
+                    <section className="MOBILE-MENU flex lg:hidden md:ml-auto" ref={menuRef}>
+                        <div
+                            className="HAMBURGER-ICON space-y-2"
+                            onClick={() => setIsNavOpen((prev) => !prev)}
+                        >
+                            <span className="block h-0.5 w-7 bg-[#6527BE] "></span>
+                            <span className="block h-0.5 w-7 bg-[#6527BE] "></span>
+                            <span className="block h-0.5 w-7 bg-[#6527BE] "></span>
+                        </div>
+
+                        <div className={isNavOpen ? "showMenuNav rounded-b-3xl" : "hideMenuNav"}>
+                            <div
+                                className="absolute top-0  right-0 md:px-10 px-3 py-[4%]"
+                                onClick={() => setIsNavOpen(false)}
+                            >
+                                <svg
+                                    className="h-9 w-10 text-[#6527BE]"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                >
+                                    <line x1="18" y1="6" x2="6" y2="18" />
+                                    <line x1="6" y1="6" x2="18" y2="18" />
+                                </svg>
+                            </div>
+                            <div
+                                className={`${isNavOpen ? 'block' : 'hidden'
+                                    } md:hidden bg-transparent`}
+                                id="mobile-Homeu"
+                                ref={menuRef}
+                            >
+                                <div className="px-2 pt-4 pb-3 space-y-1 sm:px-3" ref={menuRef}>
+                                    <div className="flex-shrink-0">
+                                        {/* <img className="h-8 w-8" src="/logo.svg" alt="Logo" /> */}
+                                        <Link to='/' className='lg:text-2xl text-xl font-bold '>B&K Solutions</Link>
+                                    </div>
+
+                                    {navbar.map(data => {
+                                        return (
+
+                                            <a key={data.id}
+                                                href={data.link}
+                                                className="text-[#6527BE] font-bold hover:text-[#ec634b] transition-all block px-3 py-2 rounded-md text-base"
+                                            >
+                                                {data.nav}
+                                            </a>
+                                        )
+                                    })}
+                                    <Link
+                                        to="/contact"
+                                        className="w-fit mx-auto text-white font-semibold bg-[#6527BE] hover:bg-white border-2 border-[#9681EB] transition-all hover:text-[#6527BE] block px-5 py-[5px] rounded-md text-base"
+                                    >
+                                        Get In Touch
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <style>{`
+      .hideMenuNav {
+        display: none;
+      }
+      .showMenuNav {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 40vh;
+        top: 0;
+        left: 0;
+        background: white;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+    `}</style>
                 </div>
             </div>
 
             {/* Mobile Homeu, toggle classes based on Homeu state */}
-            <div
-                className={`${isOpen ? 'block' : 'hidden'
-                    } md:hidden bg-white`}
-                id="mobile-Homeu" 
-                // ref={menuRef}
-            >
-                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
 
-                    {navbar.map(data => {
-                        return (
-
-                            <a key={data.id}
-                                href={data.link}
-                                className="text-[#6527BE] font-bold hover:text-[#ec634b] transition-all block px-3 py-2 rounded-md text-base"
-                            >
-                                {data.nav}
-                            </a>
-                        )
-                    })}
-                    <Link
-                        to="/contact"
-                        className="w-fit mx-auto text-white font-semibold bg-[#6527BE] hover:bg-white border-2 border-[#9681EB] transition-all hover:text-[#6527BE] block px-5 py-[5px] rounded-md text-base"
-                    >
-                        Get In Touch
-                    </Link>
-                </div>
-            </div>
         </nav>
     );
 };
