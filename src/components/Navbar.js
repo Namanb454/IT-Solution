@@ -139,7 +139,7 @@ const Navbar = () => {
                             <span className="block h-0.5 w-7 bg-[#6527BE] "></span>
                         </div>
 
-                        <div className={isNavOpen ? "showMenuNav rounded-b-3xl" : "hideMenuNav"}>
+                        <div className={isNavOpen ? "showMenuNav rounded-b-2xl" : "hideMenuNav"}>
                             <div
                                 className="absolute top-0  right-0 md:px-10 px-3 py-[4%]"
                                 onClick={() => setIsNavOpen(false)}
@@ -166,7 +166,7 @@ const Navbar = () => {
                                 <div className="px-2 pt-4 pb-3 space-y-1 sm:px-3" ref={menuRef}>
                                     <div className="flex-shrink-0">
                                         {/* <img className="h-8 w-8" src="/logo.svg" alt="Logo" /> */}
-                                        <Link to='/' className='lg:text-2xl text-xl font-bold '>B&K Solutions</Link>
+                                        <Link to='/' className='lg:text-2xl text-[#6527BE] text-xl font-bold '>B&K Solutions</Link>
                                     </div>
 
                                     {navbar.map(data => {

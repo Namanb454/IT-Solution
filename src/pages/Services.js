@@ -15,10 +15,10 @@ function Services() {
     ];
 
     return (
-        <div id='services' className='text-white'>
+        <div id='services' className='text-white lg:py-0 py-10'>
             <section className="text-white body-font">
                 <div className="container px-5 lg:py-20 py-10 mx-auto">
-                    <h2 className='lg:text-5xl text-3xl font-bold text-left px-5'>Our Services</h2>
+                    <h2 className='lg:text-5xl text-3xl my-5 font-bold text-left px-5'>Our Services</h2>
                     <div className="flex flex-wrap -m-4">
                         {services.map(data => {
                             return (

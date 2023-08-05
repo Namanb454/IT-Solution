@@ -5,7 +5,7 @@ function About() {
     return (
         <div>
             <section className="text-gray-600 body-font">
-                <div className='lg:py-20 py-10'>
+                <div className='lg:py-20 py-20'>
                     <div className="container mx-auto px-5 py-5 md:flex-row flex-col items-center">
                         <h2 className='lg:w-1/2 w-full lg:ml-auto text-center lg:pl-10 lg:text-5xl text-3xl font-bold text-white'>About Us</h2>
                     </div>
@@ -75,7 +75,7 @@ function About() {
                             </section>
                         </div>
                         <div className=" lg:w-[50%] md:w-1/2 w-0 mb-10 md:mb-0">
-                            <img className="w-full h-[50vh]  object-cover object-center rounded" alt="hero" src="about1.png" />
+                            <img className="w-full h-[50vh] object-cover object-center rounded" alt="hero" src="about1.png" />
                         </div>
                     </div>
                 </div>

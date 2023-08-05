@@ -13,7 +13,7 @@ function Home() {
 
   return (
     <div>
-      <div className='w-full fixed top-0 z-10 text-white text-center'>
+     <div className='w-full fixed top-0 z-10 text-white text-center'>
         <Navbar />
       </div>
       <div>
