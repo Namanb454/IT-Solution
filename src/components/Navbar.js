@@ -9,7 +9,7 @@ const Navbar = () => {
     const toggleHomeu = () => {
         setIsOpen(!isOpen);
     };
-    
+
     let menuRef = useRef();
     useEffect(() => {
         let handler = (e) => {
@@ -88,7 +88,7 @@ const Navbar = () => {
 
                     <div className="-mr-2 flex md:hidden">
                         <button
-                            onClick={toggleHomeu}  ref={menuRef}
+                            onClick={toggleHomeu} ref={menuRef}
                             type="button"
                             className="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-black hover:bg-white focus:outline-none focus:ring- focus:ring-offset- focus:ring-offset-gray-800 focus:ring-white"
                             aria-controls="mobile-Homeu"

@@ -2,23 +2,27 @@ import React from 'react';
 import '../Feature.css';
 
 const GridComponent = () => {
+    const boxStyle = {
+        backgroundColor: 'white',
+        boxShadow: '0px 0px 50px #bebbc2',
+    }
     const boxData = [
-        { imageUrl: 'features/img1.jpeg', heading: 'Redux Framework' },
-        { imageUrl: 'features/img2.svg', heading: 'Contact Form 7' },
-        { imageUrl: 'features/img3.png', heading: 'WPML Compactible' },
-        { imageUrl: 'features/img4.png', heading: 'Support JetPack' },
-        { imageUrl: 'features/img5.png', heading: 'SEO plugn' },
-        { imageUrl: 'features/img6.png', heading: 'FontAwesome Pro' },
-        { imageUrl: 'features/img7.png', heading: 'Unlimited Colors Option' },
-        { imageUrl: 'features/img8.png', heading: 'Google Font' },
-        { imageUrl: 'features/img9.png', heading: 'Clean Code' },
-        { imageUrl: 'features/img10.png', heading: 'Responsive Layout' },
-        { imageUrl: 'features/img11.png', heading: 'Easy To Customize' },
-        { imageUrl: 'features/img12.png', heading: 'Elementor' },
-        { imageUrl: 'features/img13.png', heading: 'WordPress 6.0.1' },
-        { imageUrl: 'features/img14.png', heading: 'One Click Demo' },
-        { imageUrl: 'features/img15.png', heading: 'MailChimp' },
-        { imageUrl: 'features/img16.png', heading: 'Speed Optimized' },
+        { imageUrl: 'features/js.png', heading: 'JavaScript' },
+        { imageUrl: 'features/reactjs.png', heading: 'React JS' },
+        { imageUrl: 'features/nodejs.png', heading: 'Node JS' },
+        { imageUrl: 'features/django.png', heading: 'Django' },
+        { imageUrl: 'features/auth0.png', heading: 'Auth0' },
+        { imageUrl: 'features/firebase.png', heading: 'Firebase' },
+        { imageUrl: 'features/bootstrap.png', heading: 'Bootstrap' },
+        { imageUrl: 'features/cleancode.png', heading: 'Clean Code' },
+        { imageUrl: 'features/customize.png', heading: 'Easy To Customize' },
+        { imageUrl: 'features/googlefont.png', heading: 'Google Font' },
+        { imageUrl: 'features/fontawesomepro.png', heading: 'Font Awesome Pro' },
+        { imageUrl: 'features/responsive.png', heading: 'Responsive Layout' },
+        { imageUrl: 'features/oneclickdemo.png', heading: 'One Click Demo' },
+        { imageUrl: 'features/speedoptimized.png', heading: 'Speed Optimized' },
+        { imageUrl: 'features/unlimitedcolor.png', heading: 'Unlimited Color Option' },
+        { imageUrl: 'features/asp.png', heading: 'ASP.NET' },
     ];
 
     const Style1 = {
@@ -57,12 +61,15 @@ const GridComponent = () => {
                         <div class="flex flex-wrap -m-4">
                             {boxData.map(data => {
                                 return (
-
-
-                                    <div class="lg:w-1/4 md:w-1/2 p-1 w-1/2">
-                                        <a class="block relative lg:w-[20%] w-[40%] my-5 rounded mx-auto overflow-hidden">
-                                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src={data.imageUrl} />
-                                        </a>
+                                    <div class="lg:w-1/4 md:w-1/2 p-5 w-1/2 ">
+                                        <div style={boxStyle} className='lg:mx-5 py-5 rounded-xl'>
+                                            <a class="  block relative lg:w-[30%] w-[40%] rounded mx-auto overflow-hidden ">
+                                                <img alt="ecommerce" class="object-cover object-center w-full h-full block" src={data.imageUrl} />
+                                            </a>
+                                            <div className='w-fit mx-auto text-center'>
+                                                <h3 className='font-semibold'>{data.heading}</h3>
+                                            </div>
+                                        </div>
                                     </div>
                                 )
                             })}

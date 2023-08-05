@@ -43,7 +43,7 @@ function About() {
                     </div>
                 </div>
 
-                <div className='py-10'>
+                <div className='lg:py-10 pt-0 pb-10'>
                     <div className="container mx-auto px-5 py-5 md:flex-row flex-col items-center">
                         <h2 className='lg:text-5xl text-center text-3xl font-bold text-white'>Why Choose B&K?</h2>
                     </div>
