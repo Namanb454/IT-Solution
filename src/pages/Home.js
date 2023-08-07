@@ -7,15 +7,13 @@ import Services from './Services';
 import Features from './Features';
 // import GetInTouch from './GetInTouch';
 import Footer from '../components/Footer';
-
+import { BsFillArrowUpCircleFill } from 'react-icons/bs';
 
 function Home() {
 
   return (
     <div>
-     <div className='w-full fixed top-0 z-10 text-white text-center'>
-        <Navbar />
-      </div>
+      
       <div>
         <Main />
       </div>
@@ -23,6 +21,8 @@ function Home() {
       <div id='about'>
         <About />
       </div>
+
+
 
       <div id='services'>
         <Services />

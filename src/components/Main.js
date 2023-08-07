@@ -14,6 +14,9 @@ function Main() {
       <div className='lg:pb-0 pb-10'>
         <div className="relative w-full lg:h-screen h-[70vh] overflow-hidden">
           <img className='lg:relative lg:w-full w-0' src='bg-video3.gif' alt='img' />
+          <div className='lg:w-full w-full lg:absolute fixed lg:top-0 z-10 text-white text-center'>
+            <Navbar />
+          </div>
           <div className='lg:w-auto w-full lg:my-0 my-[30%] lg:absolute lg:top-[53%] lg:left-[32%] transform lg:-translate-x-1/2 lg:-translate-y-1/2 z-10 text-white text-center'>
             <h2 className='lg:text-4xl text-lg font-bold text-center lg:mx-0 mx-5  md:mb-10 ' id='signupHeading' >
               Providing The Best IT Solution For
