@@ -7,23 +7,29 @@ import Services from './Services';
 import Features from './Features';
 // import GetInTouch from './GetInTouch';
 import Footer from '../components/Footer';
-import { BsFillArrowUpCircleFill } from 'react-icons/bs';
+import ScrollButton from '../components/ScrollButton';
+
 
 function Home() {
 
   return (
     <div>
-      
+
       <div>
         <Main />
       </div>
 
+      {/* <div class="relative h-32 w-full ...">
+        <div class="absolute bottom-0 bg-white sticky right-0 h-16 w-16 ...">09</div>
+      </div> */}
+
       <div id='about'>
         <About />
       </div>
-
-
-
+      <div className="overflow-y-scroll">
+        {/* Your content here */}
+        <ScrollButton />
+      </div>
       <div id='services'>
         <Services />
       </div>
