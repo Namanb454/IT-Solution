@@ -19,10 +19,6 @@ function Home() {
         <Main />
       </div>
 
-      {/* <div class="relative h-32 w-full ...">
-        <div class="absolute bottom-0 bg-white sticky right-0 h-16 w-16 ...">09</div>
-      </div> */}
-
       <div id='about'>
         <About />
       </div>

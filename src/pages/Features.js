@@ -60,15 +60,15 @@ const GridComponent = () => {
                 and enjoy our exclusive features
             </h2>
             <div className='text-white'>
-                <section class="text-gray-600 body-font">
-                    <div class="container px-5 py-24 mx-auto">
-                        <div class="flex flex-wrap -m-4">
+                <section className="text-gray-600 body-font">
+                    <div className="container px-5 py-24 mx-auto">
+                        <div className="flex flex-wrap -m-4">
                             {boxData.map(data => {
                                 return (
-                                    <div class="lg:w-1/4 md:w-1/2 p-5 w-1/2 ">
+                                    <div className="lg:w-1/4 md:w-1/2 p-5 w-1/2 ">
                                         <div style={boxStyle} className='lg:mx-5 py-5 rounded-xl'>
-                                            <a class="  block relative lg:w-[30%] w-[40%] rounded mx-auto overflow-hidden ">
-                                                <img alt="ecommerce" class="object-cover object-center w-full h-full block" src={data.imageUrl} />
+                                            <a className="  block relative lg:w-[30%] w-[40%] rounded mx-auto overflow-hidden ">
+                                                <img alt="ecommerce" className="object-cover object-center w-full h-full block" src={data.imageUrl} />
                                             </a>
                                             <div className='w-fit mx-auto text-center'>
                                                 <h3 className='font-semibold'>{data.heading}</h3>
