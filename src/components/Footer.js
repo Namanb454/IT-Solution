@@ -49,16 +49,16 @@ function Footer() {
                             <h2 class="title-font font-semibold text-xl text-[#ec634b] tracking-widest mb-3">Contact Us</h2>
                             <nav class="list-none mb-10">
                                 <li>
-                                    <a href='mailto: namanb454@gmail.com' class="text-white text-base hover:font-bold hover:text-[#9681EB]">namanb454@gmail.com</a>
-                                </li>
-                                <li>
-                                    <a href='mailto: kartikkedia011@gmail.com' class="text-white text-base hover:font-bold hover:text-[#9681EB]">kartikkedia011@gmail.com</a>
-                                </li>
-                                <li>
                                     <a href='tel: 9599791185' class="text-white text-base hover:font-bold hover:text-[#9681EB]">+91 9599791185</a>
                                 </li>
                                 <li>
                                     <a href='tel: 9599765990' class="text-white text-base hover:font-bold hover:text-[#9681EB]">+91 9599765990</a>
+                                </li>
+                                <li>
+                                    <a href='mailto: namanb454@gmail.com' class="text-white text-base hover:font-bold hover:text-[#9681EB]">namanb454@gmail.com</a>
+                                </li>
+                                <li>
+                                    <a href='mailto: kartikkedia011@gmail.com' class="text-white text-base hover:font-bold hover:text-[#9681EB]">kartikkedia011@gmail.com</a>
                                 </li>
                             </nav>
                         </div>
