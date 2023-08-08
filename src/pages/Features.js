@@ -9,11 +9,16 @@ const GridComponent = () => {
     const boxData = [
         { imageUrl: 'features/js.png', heading: 'JavaScript' },
         { imageUrl: 'features/reactjs.png', heading: 'React JS' },
+        { imageUrl: 'features/nextjs.png', heading: 'Next JS' },
+        { imageUrl: 'features/mongodb.png', heading: 'MongoDB' },
         { imageUrl: 'features/nodejs.png', heading: 'Node JS' },
         { imageUrl: 'features/django.png', heading: 'Django' },
         { imageUrl: 'features/auth0.png', heading: 'Auth0' },
         { imageUrl: 'features/firebase.png', heading: 'Firebase' },
+        { imageUrl: 'features/asp.png', heading: 'ASP.NET' },
+        { imageUrl: 'features/sanity.png', heading: 'Sanity' },
         { imageUrl: 'features/bootstrap.png', heading: 'Bootstrap' },
+        { imageUrl: 'features/tailwind.png', heading: 'Tailwind CSS' },
         { imageUrl: 'features/cleancode.png', heading: 'Clean Code' },
         { imageUrl: 'features/customize.png', heading: 'Easy To Customize' },
         { imageUrl: 'features/googlefont.png', heading: 'Google Font' },
@@ -22,7 +27,6 @@ const GridComponent = () => {
         { imageUrl: 'features/oneclickdemo.png', heading: 'One Click Demo' },
         { imageUrl: 'features/speedoptimized.png', heading: 'Speed Optimized' },
         { imageUrl: 'features/unlimitedcolor.png', heading: 'Unlimited Color Option' },
-        { imageUrl: 'features/asp.png', heading: 'ASP.NET' },
     ];
 
     const Style1 = {
