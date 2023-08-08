@@ -1,4 +1,6 @@
 import React from 'react'
+import { BiSolidPhoneCall } from 'react-icons/bi';
+import { GrMail } from 'react-icons/gr';
 
 function Footer() {
     return (
@@ -19,13 +21,14 @@ function Footer() {
                         <div className="lg:w-1/3 md:w-1/2 w-full px-4">
                             <h2 className="title-font font-semibold text-[#ec634b] tracking-widest text-xl mb-3">USEFUL LINKS</h2>
                             <nav className="list-none mb-10">
-                                <li>
+
+                                <li className='my-2'>
                                     <a href='#' className="text-white text-base hover:font-bold hover:text-[#9681EB]">Home</a>
                                 </li>
-                                <li>
+                                <li className='my-2'>
                                     <a href='#about' className="text-white text-base hover:font-bold hover:text-[#9681EB]">About Us</a>
                                 </li>
-                                <li>
+                                <li className='my-2'>
                                     <a href='#demo' className="text-white text-base hover:font-bold hover:text-[#9681EB]">Demo</a>
                                 </li>
 
@@ -34,13 +37,10 @@ function Footer() {
                         <div className="lg:w-1/3 md:w-1/2 w-full px-4">
                             <h2 className="title-font font-semibold text-[#ec634b] tracking-widest text-xl mb-3">Support</h2>
                             <nav className="list-none mb-10">
-                                <li>
+                                <li className='my-2'>
                                     <a href='#services' className="text-white text-base hover:font-bold hover:text-[#9681EB]">Services</a>
                                 </li>
-                                <li>
-                                    {/* <a className="text-gray-600 hover:text-[#9681EB]">Second Link</a> */}
-                                </li>
-                                <li>
+                                <li className='my-2'>
                                     <a href='#features' className="text-white text-base hover:font-bold hover:text-[#9681EB]">Features</a>
                                 </li>
                             </nav>
@@ -48,17 +48,40 @@ function Footer() {
                         <div className="lg:w-1/3 md:w-1/2 w-full px-4">
                             <h2 className="title-font font-semibold text-xl text-[#ec634b] tracking-widest mb-3">Contact Us</h2>
                             <nav className="list-none mb-10">
-                                <li>
-                                    <a href='tel: 9599791185' className="text-white text-base hover:font-bold hover:text-[#9681EB]">+91 9599791185</a>
+
+                                <li className='my-2'>
+
+                                    <a href='tel: 9599791185' className="text-white text-base hover:font-bold hover:text-[#9681EB]">
+                                        <div className='flex items-center '>
+                                            <BiSolidPhoneCall />
+                                            +91 9599791185
+                                        </div></a>
                                 </li>
-                                <li>
-                                    <a href='tel: 9599765990' className="text-white text-base hover:font-bold hover:text-[#9681EB]">+91 9599765990</a>
+                                <li className='my-2'>
+
+                                    <a href='tel: 9599765990' className="text-white text-base hover:font-bold hover:text-[#9681EB]">
+                                        <div className='flex items-center'>
+                                            <BiSolidPhoneCall />
+                                            +91 9599765990
+                                        </div>
+                                    </a>
+
                                 </li>
-                                <li>
-                                    <a href='mailto: namanb454@gmail.com' className="text-white text-base hover:font-bold hover:text-[#9681EB]">namanb454@gmail.com</a>
+                                <li className='my-2'>
+                                    <a href='mailto: namanb454@gmail.com' className="text-white text-base hover:font-bold hover:text-[#9681EB]">
+                                        <div className='flex items-center'>
+                                            <GrMail /> namanb454@gmail.com
+                                        </div>
+                                    </a>
                                 </li>
-                                <li>
-                                    <a href='mailto: kartikkedia011@gmail.com' className="text-white text-base hover:font-bold hover:text-[#9681EB]">kartikkedia011@gmail.com</a>
+                                <li className='my-2'>
+
+                                    <a href='mailto: kartikkedia011@gmail.com' className="text-white text-base hover:font-bold hover:text-[#9681EB]">
+                                        <div className='flex items-center'>
+                                            <GrMail />
+                                            kartikkedia011@gmail.com
+                                        </div>
+                                    </a>
                                 </li>
                             </nav>
                         </div>
@@ -96,8 +119,8 @@ function Footer() {
                         </span>
                     </div>
                 </div>
-            </footer>
-        </div>
+            </footer >
+        </div >
     )
 }
 
