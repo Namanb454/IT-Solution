@@ -19,7 +19,7 @@ function Main() {
           </div>
           <div className='lg:w-auto w-full lg:my-0 my-[30%] lg:absolute lg:top-[53%] lg:left-[32%] transform lg:-translate-x-1/2 lg:-translate-y-1/2 z-10 text-white text-center'>
             <h2 className='lg:text-4xl text-lg font-bold text-center lg:mx-0 mx-5  md:mb-10 ' id='signupHeading' >
-              Providing The Best IT Solution For
+              Your Gateway to Seamless Solutions
               <div className='w-fit font-extrabold lg:mx-5 mx-auto text-[#ec634b]' id='signupsubHeading'>
 
                 <Typewriter
@@ -36,13 +36,17 @@ function Main() {
             <div className='lg:hidden w-[100%] my-2 text-white text-center  '>
               <img src="home2.png" alt="Image" className='w-full hover:animate-pulse h-auto transition-transform' />
             </div>
-            <h3 className='lg:hidden w-full text-white text-base px-5 lg:text-justify text-center'>Empowering Your Business with Reliable IT Solutions for Uninterrupted Growth and Success. </h3>
+            <h3 className='lg:hidden w-full text-white text-base px-5 lg:text-justify text-center'>Empowering Your Business with Reliable IT Solutions for Uninterrupted Growth and Success.</h3>
+
+
           </div>
 
 
 
 
-          <h3 className='lg:w-[40%] w-full lg:absolute lg:top-[75%] top-[90%] lg:left-[30%] left-[50%] transform lg:-translate-x-1/2 lg:-translate-y-1/2 z-10 text-white text-base px-5 lg:text-justify text-center'>Empowering Your Business with Reliable IT Solutions for Uninterrupted Growth and Success. </h3>
+          <h3 className='lg:w-[40%] w-full lg:absolute lg:top-[70%] top-[90%] lg:left-[30%] left-[50%] transform lg:-translate-x-1/2 lg:-translate-y-1/2 z-10 text-white text-base px-5 lg:text-justify text-center'>We Design. We Develop. We Deliver. </h3>
+
+          <h3 className='lg:w-[40%] w-full lg:absolute lg:top-[76%] top-[90%] lg:left-[30%] left-[50%] transform lg:-translate-x-1/2 lg:-translate-y-1/2 z-10 text-white text-base px-5 lg:text-justify text-center'>Empowering Your Business with Reliable IT Solutions for Uninterrupted Growth and Success. </h3>
 
           <div className='lg:w-[50%] w-0 lg:absolute lg:top-[53%] lg:left-[75%] transform lg:-translate-x-1/2 lg:-translate-y-1/2 z-10 text-white text-center  '>
             <img src="home2.png" alt="Image" className='w-full hover:animate-pulse h-auto transition-transform' />

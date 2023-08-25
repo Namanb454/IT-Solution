@@ -52,7 +52,7 @@ const Navbar = () => {
                     <div className=" w-full flex items-center ">
                         <div className="flex-shrink-0">
                             {/* <img className="h-8 w-8" src="/logo.svg" alt="Logo" /> */}
-                            <Link to='/' className='lg:text-2xl text-xl font-bold '>B&K Solutions</Link>
+                            <Link to='/' className='lg:text-2xl text-xl font-bold '>siteScript</Link>
                         </div>
                         <div className="hidden md:block mx-auto">
                             <div className="ml-10 flex items-baseline space-x-4">
