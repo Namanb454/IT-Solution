@@ -29,7 +29,7 @@ function About() {
                                                         <div className="flex-grow pl-5">
                                                             <h2 className="title-font font-bold text-xl text-[#ec634b]">{data.heading}</h2>
                                                             {/* <h3 className="text-gray-500 mb-3">UI Developer</h3> */}
-                                                            <p className="mb-4 text-sm text-gray-300 lg:text-left text-justify">{data.values}</p>
+                                                            <p className="mb-4 text-sm text-gray-300 lg:text-left text-center">{data.values}</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -63,7 +63,7 @@ function About() {
                                                         <span className="flex-shrink-0 lg:text-6xl text-3xl text-[#9288F8] font-serif font-bold mx-auto rounded-lg w-[25%] h-[30%]">{data.sn}</span>
                                                         <div className="flex-grow pl-5">
                                                             <h2 className="title-font font-bold text-xl text-[#ec634b]">{data.q}</h2>
-                                                            <p className="mb-4 text-sm text-gray-300 lg:text-start text-justify">{data.ans}</p>
+                                                            <p className="mb-4 text-sm text-gray-300 lg:text-start text-center">{data.ans}</p>
                                                         </div>
                                                     </div>
                                                 </div>

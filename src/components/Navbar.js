@@ -167,7 +167,7 @@ const Navbar = () => {
                                 <div className="px-2 pt-4 pb-3 space-y-1 sm:px-3" ref={menuRef}>
                                     <div className="flex-shrink-0">
                                         {/* <img className="h-8 w-8" src="/logo.svg" alt="Logo" /> */}
-                                        <Link to='/' className='lg:text-2xl text-[#6527BE] text-xl font-bold '>B&K Solutions</Link>
+                                        <Link to='/' className='lg:text-2xl text-[#6527BE] text-xl font-bold '>siteScript</Link>
                                     </div>
 
                                     {navbar.map(data => {
