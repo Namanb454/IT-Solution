@@ -64,17 +64,17 @@ function Footer() {
                         </div>
                         <div className="lg:w-1/3 md:w-1/2 w-full px-4">
                             <h2 className="title-font font-semibold text-xl text-[#ec634b] tracking-widest mb-3">Contact Us</h2>
-                            <nav className="list-none mb-10">
+                            <nav className="list-none mb-10 text-center">
 
-                                <li className='my-2'>
+                                <li className='my-2 w-fit mx-auto '>
 
                                     <a href='tel: 9599791185' className="text-white text-base hover:font-bold hover:text-[#9681EB]">
-                                        <div className='flex items-center '>
+                                        <div className='flex items-center'>
                                             <BiSolidPhoneCall />
                                             +91 9599791185
                                         </div></a>
                                 </li>
-                                <li className='my-2'>
+                                <li className='my-2 w-fit mx-auto'>
 
                                     <a href='tel: 9599765990' className="text-white text-base hover:font-bold hover:text-[#9681EB]">
                                         <div className='flex items-center'>
@@ -84,14 +84,14 @@ function Footer() {
                                     </a>
 
                                 </li>
-                                <li className='my-2'>
+                                <li className='my-2 w-fit mx-auto'>
                                     <a href='mailto: namanb454@gmail.com' className="text-white text-base hover:font-bold hover:text-[#9681EB]">
                                         <div className='flex items-center'>
                                             <GrMail /> namanb454@gmail.com
                                         </div>
                                     </a>
                                 </li>
-                                <li className='my-2'>
+                                <li className='my-2 w-fit mx-auto'>
 
                                     <a href='mailto: kartikkedia011@gmail.com' className="text-white text-base hover:font-bold hover:text-[#9681EB]">
                                         <div className='flex items-center'>
