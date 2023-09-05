@@ -4,7 +4,7 @@ import '../Feature.css';
 const GridComponent = () => {
     const boxStyle = {
         backgroundColor: 'white',
-        boxShadow: '0px 0px 50px #9681EB',
+        boxShadow: '0px 0px 15px #9681EB',
     }
     const boxData = [
         { imageUrl: 'features/js.png', heading: 'JavaScript' },

@@ -58,3 +58,60 @@ exports.values = [
         'img': 'excelence.png'
     },
 ]
+
+exports.services = [
+    {
+        'id': 1,
+        'img': 'webd.png',
+        'heading': 'Web Development',
+        'desc': 'Our websites are completely responsive, optimized for sales, and built with cutting-edge technology.'
+    },
+    {
+        'id': 2,
+        'img': 'appd.png',
+        'heading': 'App Development',
+        'desc': 'Our mobile development services deliver top-notch iOS and Android apps that optimize your business operations and boost productivity, ensuring superior performance.'
+    },
+    {
+        'id': 3,
+        'img': 'blockchain.png',
+        'heading': 'Block Chain Development',
+        'desc': 'Unlock the power of blockchain technology with our expert solutions, paving the way for secure, transparent, and efficient business operations.'
+    },
+    {
+        'id': 4,
+        'img': 'softwaretool.png',
+        'heading': 'Software Tools',
+        'desc': 'We specialize in the development of top-quality software tools tailored to enhance the efficiency and productivity of your business operations.'
+    },
+    {
+        'id': 5,
+        'img': 'dataanalyst.png',
+        'heading': 'Data Analyst',
+        'desc': 'Transform data into actionable insights. Our data analysis services decode the information maze, guiding your decisions with precision.'
+    },
+    {
+        'id': 6,
+        'img': 'seo.png',
+        'heading': 'Search Engine Optimization',
+        'desc': 'Drive your digital success with our SEO mastery. We help you climb the search rankings, so your business shines in the online spotlight.'
+    },
+    {
+        'id': 7,
+        'img': 'graphicdesign.png',
+        'heading': 'Design',
+        'desc': 'Our designs are aesthetically pleasing and strategically crafted to minimize bounce and churn rates, earning high praise from end users for their effectiveness.'
+    },
+    {
+        'id': 8,
+        'img': 'contentwriting.png',
+        'heading': 'Content Writing',
+        'desc': "Words that resonate, stories that engage. Elevate your brand's voice with our compelling content writing services."
+    },
+    {
+        'id': 9,
+        'img': 'itconsultancy.png',
+        'heading': 'IT Support',
+        'desc': "Your IT backbone. We provide dependable IT support so you can focus on what matters most – your business. We don't just provide services; we deliver integrated solutions that empower your business to thrive in the digital age."
+    }
+]

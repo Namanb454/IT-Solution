@@ -8,7 +8,7 @@ function About() {
             <section className="text-gray-600 body-font">
                 <div className='lg:py-20 py-20'>
                     <div className="container mx-auto px-5 py-5 md:flex-row flex-col items-center">
-                        <h2 className='lg:w-1/2 w-full lg:ml-auto text-center lg:pl-10 lg:text-5xl text-3xl font-bold text-[#ec634b]'>About Us</h2>
+                        <h2 className='lg:w-1/2 w-full lg:ml-auto text-center lg:pl-10 lg:text-5xl text-3xl font-bold text-[#ec634b]'>Who We Are</h2>
                     </div>
 
                     <div className="container mx-auto flex px-5 md:flex-row flex-col items-center">
@@ -17,9 +17,7 @@ function About() {
                         </div>
 
                         <div className="lg:flex-grow md:w-[10%] lg:pl-10 md:pl-16 flex flex-col md:items-start md:text-left text-white">
-                            <p className="mb-8 text-gray-300 text-sm text-justify leading-relaxed">Welcome to siteScript - Your Trusted IT Solutions Partner
-
-                                At siteScript, we are driven by a passion for technology and a commitment to delivering innovative IT solutions that empower businesses to thrive in the digital age. With a team of dedicated experts and a proven track record, we are your go-to partner for all your IT needs.</p>
+                            <p className="mb-8 text-gray-300 text-sm text-justify leading-relaxed">Our company specializes in designing, developing, and delivering reliable IT solutions that empower businesses to achieve uninterrupted growth and success. We are committed to providing top-notch services that meet the unique needs of our clients and help them stay ahead of the competition.</p>
                             <section className="text-gray-600 body-font py-5">
                                 <div className="container px-5 py-5 mx-auto">
                                     <div className="flex flex-wrap -m-4">
