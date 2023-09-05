@@ -34,14 +34,15 @@ const GridComponent = () => {
         textAlign: 'center',
         paddingTop: '6rem',
         fontWeight: 'bold',
-        background: 'linear-gradient(to right, #f200ff, #104cba, #f200ff, #104cba)',
+        // background: 'linear-gradient(to right, #f200ff, #104cba, #f200ff, #104cba)',
+        background: 'white',
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
         fontFamily: 'candara',
     };
     const Style2 = {
         fontFamily: 'Trebuchet MS',
-        backgroundColor: 'white',
+        backgroundColor: '#ec634b',
         textAlign: 'center',
         // fontSize: '3rem',
         color: 'white',
@@ -54,7 +55,7 @@ const GridComponent = () => {
 
     return (
         <div>
-            <h1 className='lg:text-3xl text-xl' style={Style1}>AWESOME FEATURES</h1>
+            <h1 className='lg:text-3xl text-xl text-[#ec634b]' style={Style1}>AWESOME FEATURES</h1>
             <h2 className='lg:text-4xl text-xl font-extrabold' style={Style2}>
                 Great collection of websites
                 and enjoy our exclusive features

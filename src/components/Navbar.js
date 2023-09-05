@@ -20,19 +20,20 @@ const Navbar = () => {
     })
 
     const navbar = [
-        { 'id': '1', 'nav': 'Intro', 'link': '#' },
-        { 'id': '2', 'nav': 'About Us', 'link': '#about' },
-        { 'id': '3', 'nav': 'Services', 'link': '#services' },
-        { 'id': '4', 'nav': 'Features', 'link': '#features' },
+        // { 'id': '1', 'nav': 'Intro', 'link': '#' },
+        { 'id': '2', 'nav': 'Who We Are', 'link': '#about' },
+        { 'id': '3', 'nav': 'What We Do', 'link': '#services' },
+        { 'id': '4', 'nav': 'Our Focus', 'link': '#features' },
+        // { 'id': '4', 'nav': 'Contact Us', 'link': '#contack' },
         { 'id': '5', 'nav': 'Demo', 'link': '#Demo' },
     ];
     const [navSize, setnavSize] = useState("5rem");
     const [navColor, setnavColor] = useState("transparent");
-    const [textcolor, settextcolor] = useState("#15133C");
+    const [textcolor, settextcolor] = useState("white");
     const listenScrollEvent = () => {
         window.scrollY > 10 ? setnavColor("white") : setnavColor("transparent");
         window.scrollY > 10 ? setnavSize("4rem") : setnavSize("5rem");
-        window.scrollY > 10 ? settextcolor("#6527BE") : settextcolor("#15133C");
+        window.scrollY > 10 ? settextcolor("#6527BE") : settextcolor("white");
     };
     useEffect(() => {
         window.addEventListener("scroll", listenScrollEvent);
@@ -74,7 +75,7 @@ const Navbar = () => {
                                     to="/contact"
                                     className="text-white font-semibold bg-[#6527BE] hover:bg-white border-2 border-[#9681EB] transition-all hover:text-[#6527BE] px-5 py-[5px] rounded-md text-base"
                                 >
-                                    Get In Touch
+                                    Contact Us
                                 </Link>
 
                             </div>
