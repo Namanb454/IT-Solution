@@ -10,7 +10,8 @@ function Services() {
         <div id='services' className='text-white lg:py-0 py-10'>
             <section className="text-white body-font">
                 <div className="container px-5 lg:py-20 py-10 mx-auto">
-                    <h2 className='lg:text-5xl text-3xl my-5 font-bold text-center px-5 text-transparent bg-clip-text bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 tracking-wider'>What We Do</h2>
+
+                    <h2 className='lg:text-5xl text-3xl my-5 font-bold text-center px-5 text-transparent bg-clip-text bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 tracking-wider'>Offer Professional Services</h2>
                     <div className="flex flex-wrap -m-4">
                         {services.map(data => {
                             return (
@@ -27,6 +28,7 @@ function Services() {
                         })}
                     </div>
                 </div>
+
                 {/*text-transparent bg-clip-text bg-gradient-to-br from-cyan-400 via-violet-500 to-white */}
             </section>
         </div>

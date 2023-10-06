@@ -17,7 +17,6 @@ function AppRouter() {
                 className="progress-bar my-10"
                 style={{ scaleX: scrollYProgress }}
             /> */}
-            <Header />
             <div className='bg-gradient-to-r from-[#0e0c27] from-60% via-purple-950 via-100% to-white to-100%'>
                 {/* bg-[#0e0c27] */}
                 <Routes>

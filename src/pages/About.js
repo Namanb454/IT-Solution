@@ -1,7 +1,7 @@
 import React from 'react'
-import { about } from '../content'
-import { values } from '../content'
-import { BsFillArrowUpCircleFill } from 'react-icons/bs';
+// import { about } from '../content'
+// import { values } from '../content'
+// import { BsFillArrowUpCircleFill } from 'react-icons/bs';
 import { Aboutuscontent } from '../components/Aboutuscontent';
 function About() {
     return (

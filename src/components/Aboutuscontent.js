@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { animate, motion, stagger, useAnimate } from "framer-motion";
 
-const words = `I have a specialization in creating conversion-optimized websites using WordPress or the latest technologies such as ReactJS, NextJS, NodeJS, MongoDB, ExpressJS, Python, Django, and SQL. Additionally, I am proficient in writing easily readable Tailwind CSS code. My work is driven by a strong passion for innovation, and I have successfully developed numerous websites that showcase my dedication to delivering excellence. Whether you require a visually appealing ecommerce website that generates substantial profits or a responsive website or portfolio, I possess the necessary skills to bring your vision to life. Let us embark on this journey together to transform your ideas into remarkable digital experiences.
+const words = `I have a specialization in creating conversion-optimized websites using WordPress or the latest technologies such as ReactJS, NextJS, NodeJS, MongoDB, ExpressJS, Python, Django, and SQL. To enhance the user experience, we have implemented Tailwind CSS, Bootstrap and Framer Motion. My work is driven by a strong passion for innovation, and I have successfully developed numerous websites that showcase my dedication to delivering excellence. Whether you require a visually appealing ecommerce website that generates substantial profits or a responsive website or portfolio, I possess the necessary skills to bring your vision to life. Let us embark on this journey together to transform your ideas into remarkable digital experiences.
 `;
 
 const wordsArray = words.split(" ");
@@ -27,7 +27,7 @@ export const Aboutuscontent = () => {
             <motion.div ref={scope}>
                 {wordsArray.map((word) => {
                     return (
-                        <motion.span className="text-black/[0.8] text-lg font-semibold opacity-0">{word} </motion.span>
+                        <motion.span className="text-black/[0.8] text-justify text-lg font-semibold">{word} </motion.span>
                     );
                 })}
             </motion.div>

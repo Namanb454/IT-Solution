@@ -1,6 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-// import { BsFillCartFill } from "react-icons/bs";
-// import { HiMiniBars4 } from "react-icons/hi";
 import { motion, Variants, useScroll } from "framer-motion";
 
 import { Link } from 'react-router-dom';
@@ -55,10 +53,10 @@ const Navbar = () => {
     const navbar = [
         // { 'id': '1', 'nav': 'Intro', 'link': '#' },
         { 'id': '2', 'nav': 'About', 'link': '#about' },
-        { 'id': '3', 'nav': 'Services', 'link': '#services' },
         { 'id': '5', 'nav': 'Projects', 'link': '#Demo' },
-        { 'id': '5', 'nav': 'Achievements', 'link': '#Demo' },
-        { 'id': '4', 'nav': 'Pricing', 'link': '#features' },
+        { 'id': '3', 'nav': 'Services', 'link': '#services' },
+        { 'id': '5', 'nav': 'Resume', 'link': '#Demo' },
+        { 'id': '4', 'nav': 'Pricing', 'link': '#pricing' },
         // { 'id': '4', 'nav': 'Contact Us', 'link': '#contack' },
     ];
     const [navSize, setnavSize] = useState("5rem");
@@ -89,7 +87,7 @@ const Navbar = () => {
                     >
                         <div className="flex-shrink-0">
                             {/* <img className="h-8 w-8" src="/logo.svg" alt="Logo" /> */}
-                            <a href='/' className='lg:text-2xl text-xl font-semibold tracking-wider'>Naman Bansal</a>
+                            <a href='#' className='lg:text-2xl text-xl font-semibold tracking-wider'>Naman Bansal</a>
                         </div>
                         <motion.div className="hidden md:block ml-auto ">
                             <div className="ml-10 flex items-baseline space-x-4">
@@ -113,8 +111,7 @@ const Navbar = () => {
                                     to="/contact"
                                     className="tracking-wider items-end justify-end text-white font-semibold bg-[#6527BE] hover:bg-white border-2 border-[#9681EB] hover:text-[#6527BE] px-5 py-[5px] rounded-full text-base transition-all ease-in-out duration-500"
                                 >
-                                    Contact
-                                </Link>
+                                    Get In Touch</Link>
 
                             </div>
                         </motion.div>
@@ -199,7 +196,7 @@ const Navbar = () => {
                                         to="/contact"
                                         className="w-fit mx-auto text-white font-semibold bg-[#6527BE] hover:bg-white border-2 border-[#9681EB] transition-all hover:text-[#6527BE] block px-5 py-[5px] rounded-full text-base"
                                     >
-                                        Contact
+                                        Get In Touch
                                     </Link>
                                 </motion.div>
                             </div>

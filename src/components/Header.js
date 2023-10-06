@@ -11,7 +11,7 @@ export const Header = () => {
         // "yellow",
         // "skyblue",
         // "purple",
-        "white",
+        "#9ca3af",
         // "red",
         // "violet",
     ];
@@ -20,7 +20,7 @@ export const Header = () => {
             style={{
                 transform: `translate(-40%,-60%) skewX(-48deg) skewY(14deg) scale(0.675) rotate(0deg) translateZ(0)`,
             }}
-            className="absolute left-1/4 p-4 -top-1/4 flex  -translate-x-1/2 -translate-y-1/2 w-full h-screen z-0 "
+            className="absolute left-1/4 p-4 -top-1/4 flex  -translate-x-1/2 -translate-y-1/2 w-fit h-full z-0 "
         >
             {rows.map((_, i) => (
                 <motion.div

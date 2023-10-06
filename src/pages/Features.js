@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../Feature.css';
+// import { motion } from "framer-motion";
+// import AnimatedText from "./AnimatedText";
+// import AnimatedText from "./AnimatedText";
 
 const GridComponent = () => {
+
     const boxStyle = {
         backgroundColor: 'white',
         boxShadow: '0px 0px 15px #9681EB',
@@ -30,35 +34,30 @@ const GridComponent = () => {
     ];
 
     const Style1 = {
-        // backgroundColor: 'white',
         textAlign: 'center',
         paddingTop: '6rem',
         fontWeight: 'bold',
-        // background: 'linear-gradient(to right, #f200ff, #104cba, #f200ff, #104cba)',
-        // background: 'white',
-        // WebkitBackgroundClip: 'text',
-        // WebkitTextFillColor: 'transparent',
         fontFamily: 'candara',
     };
     const Style2 = {
         fontFamily: 'Trebuchet MS',
-        // backgroundColor: '#ec634b',
         textAlign: 'center',
-        // fontSize: '3rem',
-        // color: 'white',
-        // WebkitBackgroundClip: 'text',
-        // WebkitTextFillColor: 'transparent',
         paddingTop: '1rem',
-        // fontWeight: 'extra-bold'
     };
 
 
     return (
         <div>
             {/* <h1 className='lg:text-3xl text-xl text-white' style={Style1}>AWESOME FEATURES</h1> */}
-            <h2 className='lg:text-7xl text-3xl py-3 font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-cyan-300 via-violet-400 to-[#ea3d1e]' style={Style2}>
-                eNjoy ouR eXclusive featurEs
-            </h2>
+            <div
+            >
+                <h2 className='lg:text-7xl text-3xl py-3 font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-cyan-300 via-violet-400 to-[#ea3d1e] tracking-wider' style={Style2}>
+                    eNjoy ouR eXclusive featurEs
+                </h2>
+
+
+            </div>
+
             <div className='text-white'>
                 <section className="text-gray-600 body-font">
                     <div className="container px-5 py-24 mx-auto">
