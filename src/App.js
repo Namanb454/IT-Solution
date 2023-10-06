@@ -1,21 +1,25 @@
-// import logo from './logo.svg';
 import './App.css';
-// import ReactDOM from "react-dom/client";
+import { motion, useScroll } from "framer-motion"
 import {
     BrowserRouter as Router,
     Routes,
     Route
 } from "react-router-dom";
 import Home from './pages/Home';
-// import About from './pages/About';
-// import Services from './pages/Services';
 import GetInTouch from './pages/GetInTouch';
-
+import { Header } from './components/Header';
 
 function AppRouter() {
+    const { scrollYProgress } = useScroll()
     return (
         <Router>
-            <div className='bg-[#0e0c27]'>
+            {/* <motion.div
+                className="progress-bar my-10"
+                style={{ scaleX: scrollYProgress }}
+            /> */}
+            <Header />
+            <div className='bg-gradient-to-r from-[#0e0c27] from-60% via-purple-950 via-100% to-white to-100%'>
+                {/* bg-[#0e0c27] */}
                 <Routes>
                     <Route exact path="/" element={<Home />} />
                     <Route exact path="/contact" element={<GetInTouch />} />

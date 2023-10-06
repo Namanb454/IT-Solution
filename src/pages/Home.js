@@ -8,6 +8,8 @@ import Features from './Features';
 // import GetInTouch from './GetInTouch';
 import Footer from '../components/Footer';
 import ScrollButton from '../components/ScrollButton';
+import { Header2 } from '../components/Header2';
+import { Header } from '../components/Header';
 
 
 function Home() {
@@ -15,8 +17,9 @@ function Home() {
   return (
     <div>
 
-      <div>
+      <div className=''>
         <Main />
+        {/* <Header2 /> */}
       </div>
 
       <div id='about'>

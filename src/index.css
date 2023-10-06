@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+.progress-bar {
+  left: 0;
+  right: 0;
+  transform-origin: 0%;
+}
+
+
 .max-w-md {
   width: 100%;
   max-width: 60rem;
