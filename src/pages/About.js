@@ -1,9 +1,12 @@
-import React from 'react'
-// import { about } from '../content'
-// import { values } from '../content'
-// import { BsFillArrowUpCircleFill } from 'react-icons/bs';
+import React, { useEffect } from 'react'
+// import React from 'react'
 import { Aboutuscontent } from '../components/Aboutuscontent';
+import Aos from 'aos'
+
 function About() {
+    useEffect(() => {
+        Aos.init()
+    }, [])
     return (
         <div>
             <section className="text-gray-600 body-font">
@@ -14,7 +17,10 @@ function About() {
 
                     <div className="container mx-auto flex px-5 md:flex-row flex-col ">
                         <div className=" lg:w-1/2 md:w-1/2 w-5/6 mb-10 md:mb-0">
-                            <h2 className='py-3 w-full px-16 text-left lg:text-6xl text-3xl font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-br from-violet-500 to-[#ea3d1e]'>
+                            <h2 className='py-3 w-full px-16 text-left lg:text-6xl text-3xl font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-br from-violet-500 to-[#ea3d1e]'
+                                data-aos="fade-zoom-in"
+                                data-aos-easing="ease-in-back"
+                                data-aos-offset="0">
                                 <span className='w-full text-4xl tracking-wider text-white'>Creating</span>
                                 <br />
                                 Unforgettable

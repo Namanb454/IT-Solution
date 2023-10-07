@@ -1,137 +1,69 @@
-import { motion } from "framer-motion";
-import {
-    HiCodeBracketSquare,
-    HiMagnifyingGlass,
-    HiMapPin,
-    HiTag,
-    HiWindow,
-} from "react-icons/hi2";
-import { useEffect, useRef, useState } from "react";
-const cards = [
-    {
-        id: 1,
-        icon: (
-            <HiMagnifyingGlass className="h-10 w-10 text-4xl text-sky-500 stroke-[3px]" />
-        ),
-    },
-    {
-        id: 2,
-        icon: <HiMapPin className="h-10 w-10 text-4xl text-sky-500 stroke-[3px]" />,
-    },
-    {
-        id: 3,
-        icon: <HiTag className="h-10 w-10 text-4xl text-sky-500 " />,
-    },
-    {
-        id: 4,
-        icon: <HiWindow className="h-10 w-10 text-4xl text-sky-500 " />,
-    },
-    {
-        id: 5,
-        icon: <HiCodeBracketSquare className="h-10 w-10 text-4xl text-sky-500 " />,
-    },
-];
-const cardVariants = {
-    selected: {
-        rotateY: 180,
-        scale: 1.1,
-        transition: { duration: 0.35 },
-        zIndex: 10,
-        boxShadow:
-            "rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px",
-    },
-    notSelected: (i: any) => ({
-        rotateY: i * 15,
-        scale: 1 - Math.abs(i * 0.15),
-        x: i ? i * 50 : 0,
-        opacity: 1 - Math.abs(i * 0.15),
-        zIndex: 10 - Math.abs(i),
-        boxShadow:
-            "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px",
-        transition: { duration: 0.35 },
-    }),
+"use client";
+import type { NextPage } from "next";
+import React, { useRef } from "react";
+import { useScroll, useTransform, motion } from "framer-motion";
+import { projects } from "../content";
+export const HeroScrollPreview = () => {
+  return (React.createElement("div", { className: "flex flex-col bg-white" },
+    React.createElement(HeroScroll, null)));
 };
-export const CardRotation = () => {
-    const [selectedCard, setSelectedCard] = useState(null);
-    const [{ startX, startScrollLeft, isDragging }, setDragStart] = useState({
-        startX: undefined as any,
-        startScrollLeft: undefined as any,
-        isDragging: false as any,
-    });
-    const containerRef = useRef < any > ();
-    const cardRefs = useRef < any > (new Array());
-    useEffect(() => {
-        const { scrollWidth, clientWidth } = containerRef.current;
-        const halfScroll = (scrollWidth - clientWidth) / 2;
-        containerRef.current.scrollLeft = halfScroll;
-    }, [containerRef.current]);
-    const handleMouseDown = (e: any) => {
-        setDragStart({
-            startX: e.pageX - containerRef.current.offsetLeft,
-            startScrollLeft: containerRef.current.scrollLeft,
-            isDragging: true,
-        });
+export const HeroScroll = () => {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll();
+  const [isMobile, setIsMobile] = React.useState(false);
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
     };
-    const handleMouseMove = (e: any) => {
-        if (!isDragging || selectedCard) return;
-        const x = e.pageX - containerRef.current.offsetLeft;
-        const walk = x - startX;
-        containerRef.current.scrollLeft = startScrollLeft - walk;
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => {
+      window.removeEventListener("resize", checkMobile);
     };
-    const selectCard = (card: any) => {
-        setSelectedCard(selectedCard ? null : card);
-
-        if (card && !selectedCard) {
-            cardRefs.current[card - 1].scrollIntoView({
-                behavior: "smooth",
-                block: "nearest",
-                inline: "center",
-            });
-        }
-    };
-    const handleCardMouseUp = (e: any, card: any) => {
-        if (isDragging) {
-            const x = e.pageX - containerRef.current.offsetLeft;
-            const walk = x - startX;
-            if (Math.abs(walk) < 5) selectCard(card);
-        } else selectCard(card);
-    };
-
-    return (
-        <div
-            className="h-full w-full flex items-center  max-w-2xl   relative"
-            onMouseDown={handleMouseDown}
-            onMouseUp={() => setDragStart((prev) => ({ ...prev, isDragging: false }))}
-            onMouseMove={handleMouseMove}
-        >
-            <div className="absolute left-0  w-32 bg-slate-900 [mask-image:linear-gradient(to_right,white,transparent)] h-full z-30" />
-            <div className="absolute right-0  w-32 bg-slate-900 [mask-image:linear-gradient(to_left,white,transparent)] h-full z-30" />
-            <div
-                className="max-w-[100%] overflow-x-scroll w-full h-full no-visible-scrollbar relative"
-                style={{
-                    whiteSpace: "nowrap",
-                    perspective: "150px",
-                }}
-                ref={containerRef}
-            >
-                {cards.map((card, i) => (
-                    <motion.div
-                        className="card relative inline-block items-center justify-center h-40 w-40 bg-slate-800 m-10 rounded-md cursor-pointer"
-                        key={card.id}
-                        ref={(el) => cardRefs.current.push(el)}
-                        onMouseUp={(e) => handleCardMouseUp(e, card.id)}
-                        variants={cardVariants}
-                        animate={selectedCard === card.id ? "selected" : "notSelected"}
-                        custom={selectedCard ? selectedCard - card.id : 0}
-                    >
-                        <div className="h-full w-full flex items-center justify-center">
-                            {card.icon}
-                        </div>
-                    </motion.div>
-                ))}
-            </div>
-        </div>
-    );
+  }, []);
+  const scaleDimensions = () => {
+    return isMobile ? [0.7, 0.9] : [1.05, 1];
+  };
+  const rotate = useTransform(scrollYProgress, [0, 1], [20, 0]);
+  const scale = useTransform(scrollYProgress, [0, 1], scaleDimensions());
+  const translate = useTransform(scrollYProgress, [0, 1], [0, -100]);
+  return (React.createElement("div", { className: "h-[120vh] flex items-center justify-center relative " },
+    React.createElement("div", {
+      className: "py-40 w-full relative", style: {
+        perspective: "1000px",
+      }
+    },
+      React.createElement(Header, { translate: translate }),
+      React.createElement(Card, { rotate: rotate, translate: translate, scale: scale }))));
 };
-
-
+export const Header = ({ translate }) => {
+  return (React.createElement(motion.div, {
+    style: {
+      translateY: translate,
+    }, className: "div max-w-5xl mx-auto text-center"
+  },
+    React.createElement("h1", { className: "text-4xl font-semibold" },
+      "Unleash the power of ",
+      React.createElement("br", null),
+      " ",
+      React.createElement("span", { className: "text-4xl md:text-[6rem] font-bold mt-1 leading-none" }, "Scroll Animations"))));
+};
+export const Card = ({ rotate, scale, translate, }) => {
+  return (React.createElement(motion.div, {
+    style: {
+      rotateX: rotate,
+      scale,
+      boxShadow: "0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003",
+    }, className: "max-w-5xl -mt-12 mx-auto h-[30rem] md:h-[40rem] w-full border-4 border-[#6C6C6C] p-6 bg-[#222222] rounded-[30px] shadow-2xl"
+  },
+    React.createElement("div", { className: "bg-gray-100 h-full w-full rounded-2xl grid grid-cols-3 md:grid-cols-5 gap-4 overflow-hidden p-4" }, projects.map((user, idx) => (React.createElement(motion.div, {
+      key: `user-${idx}`, className: "bg-white rounded-md cursor-pointer relative", style: { translateY: translate }, whileHover: {
+        boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+      }
+    },
+      React.createElement("div", { className: "absolute top-2 right-2 rounded-full text-xs font-bold bg-white px-2 py-1" }, user.badge),
+      React.createElement("img", { src: user.image, className: "rounded-tr-md rounded-tl-md text-sm " }),
+      React.createElement("div", { className: "p-4" },
+        React.createElement("h1", { className: "font-semibold text-sm " }, user.name),
+        React.createElement("h2", { className: " text-gray-500 text-xs " }, user.designation))))))));
+};

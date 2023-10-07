@@ -102,16 +102,16 @@ exports.services = [
         'heading': 'Content Management',
         'desc': 'The task at hand involves the establishment and customization of content management systems for clients, enabling them to conveniently modify and update the content of their websites.'
     },
-    // {
-    //     'id': 8,
-    //     'img': 'contentwriting.png',
-    //     'heading': 'Content Writing',
-    //     'desc': "Words that resonate, stories that engage. Elevate your brand's voice with our compelling content writing services."
-    // },
     {
         'id': 9,
         'img': 'itconsultancy.png',
         'heading': 'Support',
         'desc': "Offering technical assistance and resolving any problems that may occur subsequent to the launch."
+    }
+]
+
+exports.projects = [
+    {
+        
     }
 ]

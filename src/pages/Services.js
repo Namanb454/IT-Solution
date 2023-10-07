@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { services } from '../content'
+import Aos from 'aos'
 
 
 function Services() {
-    // let [hoveredIndex, setHoveredIndex] = useState < number | null > (null);
+    useEffect(() => {
+        Aos.init()
+    }, [])
+
 
     return (
         <div id='services' className='text-white lg:py-0 py-10'>
@@ -15,7 +19,10 @@ function Services() {
                     <div className="flex flex-wrap -m-4">
                         {services.map(data => {
                             return (
-                                <div key={data.id} className="py-10 px-5 lg:w-1/3 bg-cover h-[65vh]">
+                                <div key={data.id} className="py-10 px-5 lg:w-1/3 bg-cover h-[65vh]"
+                                    data-aos="fade-up"
+                                    data-aos-delay="200"
+                                >
                                     <div className="h-full bg-transparent border-[#8062D6] hover:bg-[#6527BE] hover:text- transition-all border-[1px] bg-opacity-75 lg:px-10 px-2 pt-10 pb-10 rounded-lg overflow-hidden relative">
                                         <div className='flex'>
                                             <h1 className="w-full title-font sm:text-2xl text-xl lg:text-left text-center font-bold mb-3 tracking-widest text-slate-300">{data.heading}</h1>

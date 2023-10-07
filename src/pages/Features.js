@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../Feature.css';
-// import { motion } from "framer-motion";
-// import AnimatedText from "./AnimatedText";
-// import AnimatedText from "./AnimatedText";
+import Aos from 'aos'
 
 const GridComponent = () => {
+    useEffect(() => {
+        Aos.init()
+    }, [])
 
     const boxStyle = {
         backgroundColor: 'white',
@@ -64,7 +65,10 @@ const GridComponent = () => {
                         <div className="flex flex-wrap -m-4">
                             {boxData.map(data => {
                                 return (
-                                    <div className="lg:w-1/4 md:w-1/2 p-5 w-1/2 ">
+                                    <div className="lg:w-1/4 md:w-1/2 p-5 w-1/2 "
+                                        data-aos="zoom-in"
+                                        data-aos-delay="100"
+                                    >
                                         <div style={boxStyle} className='lg:mx-5 py-5 rounded-xl'>
                                             <a className="  block relative lg:w-[30%] w-[40%] rounded mx-auto overflow-hidden ">
                                                 <img alt="ecommerce" className="object-cover object-center w-full h-full block" src={data.imageUrl} />

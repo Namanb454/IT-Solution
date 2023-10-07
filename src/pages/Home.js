@@ -8,6 +8,8 @@ import Features from './Features';
 import Footer from '../components/Footer';
 import ScrollButton from '../components/ScrollButton';
 import Pricing, { MeteorPreview } from './Pricing';
+import Projects from './Projects';
+// import { HeroScroll } from '../components/Code';
 
 
 function Home() {
@@ -22,6 +24,11 @@ function Home() {
 
       <div id='about'>
         <About />
+      </div>
+
+      <div id='projects'>
+        {/* <HeroScroll /> */}
+        <Projects />
       </div>
 
       <div className="overflow-y-scroll">

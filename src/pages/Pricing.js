@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Meteors } from '../components/Meteors'
+import Aos from 'aos'
 
 function Pricing() {
+    useEffect(() => {
+        Aos.init()
+    }, [])
+
     const price = [
         {
             "title": "Essential",
@@ -55,7 +60,10 @@ function Pricing() {
                         {price.map(data => {
                             return (
 
-                                <div class="py-10 px-5 xl:w-1/3 md:w-1/2 w-full ">
+                                <div class="py-10 px-5 xl:w-1/3 md:w-1/2 w-full "
+                                    data-aos="fade-up"
+                                    data-aos-delay="300"
+                                >
                                     <div class="h-full p-6 rounded-lg  flex flex-col relative overflow-hidden">
                                         <div className="absolute inset-0 h-full w-full rounded-full blur-3xl" />
                                         <div className="relative shadow-xl  bg-gradient-to-br from-indigo-950 via-purple-950 to-pink-700  border-2 border-gray-300  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col ">
