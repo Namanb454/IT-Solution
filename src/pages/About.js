@@ -16,28 +16,24 @@ function About() {
                     </div>
 
                     <div className="container mx-auto flex px-5 md:flex-row flex-col ">
-                        <div className=" lg:w-1/2 md:w-1/2 w-5/6 mb-10 md:mb-0">
-                            <h2 className='py-3 w-full px-16 text-left lg:text-6xl text-3xl font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-br from-violet-500 to-[#ea3d1e]'
+                        <div className=" lg:w-1/2 md:w-1/2 w-full mb-10 md:mb-0">
+                            <h2 className='py-3 w-full lg:px-16 lg:text-left text-center lg:text-6xl text-2xl font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-br from-violet-500 to-[#ea3d1e]'
                                 data-aos="fade-zoom-in"
                                 data-aos-easing="ease-in-back"
                                 data-aos-offset="0">
-                                <span className='w-full text-4xl tracking-wider text-white'>Creating</span>
+                                <span className='w-full lg:text-4xl text-2xl tracking-wider text-white'>Creating </span>
+                                {/* <br /> */}
+                                <span className='lg:text-5xl text-3xl'>Unforgettable</span>
                                 <br />
-                                Unforgettable
-                                <br />
-                                <span className='w-full text-4xl tracking-wider text-white'>Digital</span>
-                                <br />
-                                Experiences
+                                <span className='w-full lg:pr-20 lg:text-4xl text-3xl tracking-wider lg:text-white'>Digital </span>
+                                {/* <br /> */}
+                                <span className='lg:text-5xl text-2xl lg:text-transparent text-white'>Experiences</span>
                             </h2>
                             {/* <img className='w-60 mx-auto' src='profile.jpg' /> */}
                         </div>
 
                         <div className="lg:flex-grow md:w-[10%] lg:pl-10 md:pl-16 flex flex-col md:items-start md:text-left text-white">
-                            {/* <p className="mb-8 text-base font-semibold text-justify tracking-wide ">
-                                I have a specialization in creating conversion-optimized websites using WordPress or the latest technologies such as ReactJS, NextJS, NodeJS, MongoDB, ExpressJS, Python, Django, and SQL. Additionally, I am proficient in writing easily readable Tailwind CSS code. My work is driven by a strong passion for innovation, and I have successfully developed numerous websites that showcase my dedication to delivering excellence. Whether you require a visually appealing ecommerce website that generates substantial profits or a responsive website or portfolio, I possess the necessary skills to bring your vision to life. Let us embark on this journey together to transform your ideas into remarkable digital experiences.
-                            </p> */}
                             <Aboutuscontent />
-                            {/*  */}
                         </div>
                     </div>
                 </div>

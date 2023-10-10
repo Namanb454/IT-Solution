@@ -51,8 +51,8 @@ function Pricing() {
                 <div class="container px-5 lg:py-20 py-10 mx-auto">
 
                     <div class="flex flex-col text-center w-full">
-                        <h1 class="w-[80%] mx-auto lg:text-5xl text-3xl font-bold text-center px-5 py-5 text-white tracking-wider" style={style}>All Businesses Can Benefit from
-                            <span className='text-transparent bg-clip-text bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 tracking-widest'> Flexible Payment</span> Options.</h1>
+                        <h1 class="lg:w-[80%] mx-auto lg:text-5xl text-2xl font-bold text-center lg:px-5 py-5 text-white tracking-wider" style={style}>All Businesses Can Benefit from
+                            <span className='text-4xl text-transparent bg-clip-text bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 tracking-widest'> Flexible Payment</span> Options.</h1>
 
                     </div>
                     <div class="flex flex-wrap -m-4">
@@ -60,7 +60,7 @@ function Pricing() {
                         {price.map(data => {
                             return (
 
-                                <div class="py-10 px-5 xl:w-1/3 md:w-1/2 w-full "
+                                <div class="lg:py-10 py-2 lg:px-5 xl:w-1/3 md:w-1/2 w-full "
                                     data-aos="fade-up"
                                     data-aos-delay="300"
                                 >
@@ -124,7 +124,7 @@ function Pricing() {
                         })}
                     </div>
                     <div class="flex flex-col text-center w-full">
-                        <p class="w-full mx-auto lg:text-sm text-3xl text-center text-gray-300 tracking-wider" style={style}>All Do you require assistance in selecting the optimal plan? Feel free to <a href='#contact' className='text-white font-bold'>Contact Us</a> without any hesitation.</p>
+                        <p class="w-full mx-auto lg:text-sm text-xs text-center text-gray-300 tracking-wider" style={style}>All Do you require assistance in selecting the optimal plan? Feel free to <a href='#contact' className='text-white font-bold'>Contact Us</a> without any hesitation.</p>
 
                     </div>
                 </div>

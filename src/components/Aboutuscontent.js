@@ -27,7 +27,7 @@ export const Aboutuscontent = () => {
       <motion.div ref={scope}>
         {wordsArray.map((word) => {
           return (
-            <motion.span className="text-black/[0.8] text-lg font-semibold opacity-0">{word} </motion.span>
+            <motion.span className="text-black/[0.8] lg:text-lg text-base font-semibold opacity-0">{word} </motion.span>
           );
         })}
       </motion.div>
