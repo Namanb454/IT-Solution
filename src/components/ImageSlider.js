@@ -44,7 +44,7 @@ const Card = ({ card }) => {
     return (
         <div
             key={card.id}
-            className="group relative h-[450px] w-[450px] overflow-hidden bg-neutral-200"
+            className="group relative w-[20vw] h-[50vh] overflow-hidden bg-neutral-200"
         >
             <div
                 style={{
@@ -55,9 +55,9 @@ const Card = ({ card }) => {
                 className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
             ></div>
             <div className="absolute inset-0 z-10 grid place-content-center">
-                <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-white backdrop-blur-lg">
-                    {card.title}
-                </p>
+                {/* <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-white "> */}
+                {/* {card.title} */}
+                {/* </p> */}
             </div>
         </div>
     );
@@ -66,6 +66,14 @@ const Card = ({ card }) => {
 export default Example;
 
 const cards = [
+    { url: 'features/js.png', title: 'JavaScript' },
+    { url: 'features/reactjs.png', title: 'React JS' },
+    { url: 'features/nextjs.png', title: 'Next JS' },
+    { url: 'features/mongodb.png', title: 'MongoDB' },
+    { url: 'features/nodejs.png', title: 'Node JS' },
+    { url: 'features/django.png', title: 'Django' },
+    { url: 'features/auth0.png', title: 'Auth0' },
+    { url: 'features/firebase.png', title: 'Firebase' },
     {
         url: "/imgs/abstract/1.jpg",
         title: "Title 1",

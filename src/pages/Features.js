@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import styled, { keyframes, css } from "styled-components";
+
 import '../Feature.css';
 import Aos from 'aos'
 
@@ -7,11 +9,7 @@ const GridComponent = () => {
         Aos.init()
     }, [])
 
-    const boxStyle = {
-        backgroundColor: 'white',
-        boxShadow: '0px 0px 15px #9681EB',
-    }
-    const boxData = [
+    const boxData1 = [
         { imageUrl: 'features/js.png', heading: 'JavaScript' },
         { imageUrl: 'features/reactjs.png', heading: 'React JS' },
         { imageUrl: 'features/nextjs.png', heading: 'Next JS' },
@@ -34,59 +32,98 @@ const GridComponent = () => {
         { imageUrl: 'features/unlimitedcolor.png', heading: 'Unlimited Color Option' },
     ];
 
-    const Style1 = {
-        textAlign: 'center',
-        paddingTop: '6rem',
-        fontWeight: 'bold',
-        fontFamily: 'candara',
-    };
-    const Style2 = {
-        fontFamily: 'Trebuchet MS',
-        textAlign: 'center',
-        paddingTop: '1rem',
-    };
-
-
     return (
         <div>
-            {/* <h1 className='lg:text-3xl text-xl text-white' style={Style1}>AWESOME FEATURES</h1> */}
-            <div
-            >
-                <h2 className='lg:text-7xl text-3xl py-3 font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-cyan-300 via-violet-400 to-[#ea3d1e] tracking-wider' style={Style2}>
-                    eNjoy ouR eXclusive featurEs
-                </h2>
-
-
+            <div className='lg:w-[100%] lg:h-[40vh] h-[20vh] relative flex items-center justify-center'>
+                <div className='w-full h-fit flex items-center justify-center flex-col'>
+                    <Marquee className='Marquee'>
+                        <MarqueeGroup className=''>
+                            {boxData1.map((el) => (
+                                <ImageGroup className='lg:w-full w-full'>
+                                    <Image src={el.imageUrl} className='lg:w-28 w-full bg-cover lg:px-3 px-1 ' />
+                                </ImageGroup>
+                            ))}
+                        </MarqueeGroup>
+                        <MarqueeGroup className=''>
+                            {boxData1.map((el1) => (
+                                <ImageGroup className='lg:w-full w-full'>
+                                    <Image src={el1.imageUrl} className='lg:w-28 w-full bg-cover lg:px-3 px-1 ' />
+                                </ImageGroup>
+                            ))}
+                        </MarqueeGroup>
+                    </Marquee>
+                </div>
             </div>
-
-            <div className='text-white'>
-                <section className="text-gray-600 body-font">
-                    <div className="container px-5 py-24 mx-auto">
-                        <div className="flex flex-wrap -m-4">
-                            {boxData.map(data => {
-                                return (
-                                    <div className="lg:w-1/4 md:w-1/2 p-5 w-1/2 "
-                                        data-aos="zoom-in"
-                                        data-aos-delay="100"
-                                    >
-                                        <div style={boxStyle} className='lg:mx-5 py-5 rounded-xl'>
-                                            <a className="  block relative lg:w-[30%] w-[40%] rounded mx-auto overflow-hidden ">
-                                                <img alt="ecommerce" className="object-cover object-center w-full h-full block" src={data.imageUrl} />
-                                            </a>
-                                            <div className='w-fit mx-auto text-center'>
-                                                <h3 className='font-semibold'>{data.heading}</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                )
-                            })}
-                        </div>
-                    </div>
-                </section>
-            </div>
-
         </div>
     )
 };
 
 export default GridComponent;
+const Marquee = styled.div`
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+
+  mask-image: linear-gradient(
+    to right,
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 1) 10%,
+    hsl(0 0% 0% / 1) 90%,
+    hsl(0 0% 0% / 0)
+  );
+`;
+
+const scrollX = keyframes`
+  from {
+    left: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+`;
+
+const common = css`
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  white-space: nowrap;
+  width: 200%;
+  animation: ${scrollX} 20s linear infinite;  
+`;
+
+// const style = {
+//     '@media (max-width: 600px)': {
+//         width: '100%',
+//         justify: 'space-evenly',
+//     },
+// }
+
+const MarqueeGroup = styled.div`
+  ${common}
+  
+`;
+
+const ImageGroup = styled.div`
+  display: ;
+  place-items: ;
+  padding: 0px;
+`;
+
+const ResponsiveImage = {
+    '@media (max-width: 600px)': {
+        width: '20vw',
+        height: '10vh',
+        padding: '10'
+    },
+}
+
+const Image1 = {
+    width: '10rem',
+    height: '20vh',
+    padding: '0'
+}
+
+const Image = styled.img`
+
+`;

@@ -1,15 +1,11 @@
-import React, { useEffect } from 'react'
-import Aos from 'aos'
+import React from 'react'
+import Example from '../components/ImageSlider'
 
 function Projects() {
-
-    useEffect(() => {
-        Aos.init()
-    }, [])
-
     return (
         <div>
-
+            {/* <Carousel /> */}
+            {/* <Example /> */}
         </div>
     )
 }
