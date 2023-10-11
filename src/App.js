@@ -13,17 +13,11 @@ function AppRouter() {
     const { scrollYProgress } = useScroll()
     return (
         <Router>
-            {/* <motion.div
-                className="progress-bar my-10"
-                style={{ scaleX: scrollYProgress }}
-            /> */}
+
             <div className='bg-gradient-to-r from-[#0e0c27] from-60% via-purple-950 via-100% to-white to-100%'>
-                {/* bg-[#0e0c27] */}
                 <Routes>
                     <Route exact path="/" element={<Home />} />
                     <Route exact path="/contact" element={<GetInTouch />} />
-                    {/* <Route exact path="/services" element={<Services />} /> */}
-                    {/* <Route exact path="/about" element={<About />} /> */}
                 </Routes>
             </div>
         </Router>

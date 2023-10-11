@@ -29,7 +29,7 @@ const ScrollButton = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={classNames('fixed', 'bottom-4', 'right-4', 'p-2', 'rounded-full', 'bg-[#ec634b]', {
+      className={classNames('fixed', 'bottom-4', 'right-4', 'p-2', 'rounded-full', 'bg-white', {
         'hidden': !isVisible,
       })}
     >
@@ -39,7 +39,7 @@ const ScrollButton = () => {
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
-        className="h-6 w-6 text-white"
+        className="h-6 w-6 text-[#6527BE] "
       >
         <path
           strokeLinecap="round"

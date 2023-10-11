@@ -132,7 +132,7 @@ function Pricing() {
                         })}
                     </div>
                     <div class="flex flex-col text-center w-full">
-                        <p class="w-full mx-auto lg:text-sm text-xs text-center text-gray-300 tracking-wider" style={style}>All Do you require assistance in selecting the optimal plan? Feel free to <a href='#contact' className='text-white font-bold'>Contact Us</a> without any hesitation.</p>
+                        <p class="w-full mx-auto lg:text-sm text-xs text-center text-gray-300 tracking-wider" style={style}>All Do you require assistance in selecting the optimal plan? Feel free to <span className='text-white font-bold'>Contact Us</span> without any hesitation.</p>
 
                     </div>
                 </div>
