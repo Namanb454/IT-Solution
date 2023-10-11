@@ -107,11 +107,11 @@ const Navbar = () => {
                                     )
                                 })}
 
-                                <Link
-                                    to="/contact"
+                                <a
+                                    href="#contact"
                                     className="tracking-wider items-end justify-end text-white font-semibold bg-[#6527BE] hover:bg-white border-2 border-[#9681EB] hover:text-[#6527BE] px-5 py-[5px] rounded-full text-base transition-all ease-in-out duration-500"
                                 >
-                                    Get In Touch</Link>
+                                    Get In Touch</a>
 
                             </div>
                         </motion.div>
@@ -192,12 +192,12 @@ const Navbar = () => {
                                             </motion.a>
                                         )
                                     })}
-                                    <Link
-                                        to="/contact"
+                                    <a
+                                        href="#contact"
                                         className="w-fit mx-auto text-white font-semibold bg-[#6527BE] hover:bg-white border-2 border-[#9681EB] transition-all hover:text-[#6527BE] block px-5 py-[5px] rounded-full text-base"
                                     >
                                         Get In Touch
-                                    </Link>
+                                    </a>
                                 </motion.div>
                             </div>
                         </div>

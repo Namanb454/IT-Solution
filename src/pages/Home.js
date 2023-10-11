@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import ScrollButton from '../components/ScrollButton';
 import Pricing from './Pricing';
 import Projects from './Projects';
+import GetInTouch from './GetInTouch';
 
 
 function Home() {
@@ -43,6 +44,10 @@ function Home() {
       <div id='pricing'>
         {/* <MeteorPreview /> */}
         <Pricing />
+      </div>
+
+      <div id='contact'>
+        <GetInTouch />
       </div>
 
       <div>

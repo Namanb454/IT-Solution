@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { Meteors } from '../components/Meteors'
+import { motion } from "framer-motion";
 import Aos from 'aos'
 
 function Pricing() {
@@ -52,7 +53,7 @@ function Pricing() {
 
                     <div class="flex flex-col text-center w-full">
                         <h1 class="lg:w-[80%] mx-auto lg:text-5xl text-2xl font-bold text-center lg:px-5 py-5 text-white tracking-wider" style={style}>All Businesses Can Benefit from
-                            <span className='text-4xl text-transparent bg-clip-text bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 tracking-widest'> Flexible Payment</span> Options.</h1>
+                            <span className='lg:text-5xl text-4xl text-transparent bg-clip-text bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 tracking-widest'> Flexible Payment</span> Options.</h1>
 
                     </div>
                     <div class="flex flex-wrap -m-4">
@@ -113,8 +114,15 @@ function Pricing() {
                                                     </svg>
                                                 </span>{data.desc6}
                                             </p>
-                                            <a href='#contact' class="flex items-center mt-auto text-white bg-gradient-to-r from-cyan-500 to-blue-500 border-0 py-2 px-4 w-fit mx-auto focus:outline-none hover:bg-gray-500 font-bold rounded " style={buttonstyle} >Start Building
-                                            </a>
+                                            <motion.a
+                                                whileTap={{
+                                                    scale: 0.8,
+                                                    borderRadius: "100%",
+                                                }}
+                                                data-te-ripple-init
+                                                data-te-ripple-color="light"
+                                                href='#contact' class="flex items-center mt-auto text-white bg-gradient-to-r from-cyan-500 to-blue-500 border-0 py-2 px-4 w-fit mx-auto focus:outline-none hover:bg-gray-500 font-bold rounded " style={buttonstyle} >Start Building
+                                            </motion.a>
                                             <Meteors number={20} />
                                         </div>
                                     </div>
